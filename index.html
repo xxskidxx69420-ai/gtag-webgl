@@ -76,8 +76,7 @@
           const dataUrl = await mergeFiles(getParts("Build/GTAG.data", 1, 9));
 
           // If wasm is NOT split, use normal path. If split, merge like data:
-          // const codeUrl = await mergeFiles(getParts("Build/GTAG.wasm", 1, 2));
-          const codeUrl = "Build/GTAG.wasm";
+          const codeUrl = await mergeFiles(getParts("Build/GTAG.wasm", 1, 2));
 
           const container = document.querySelector("#unity-container");
           container.hidden = false;
